@@ -1,0 +1,59 @@
+{
+  "item": [
+    {
+      "id": "26f879a7-d05c-4243-b8bf-e95d1b87326d",
+      "name": "Generate Token",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "port": "5000",
+          "path": ["api", "auth", "generate-token"],
+          "host": ["localhost"],
+          "query": [],
+          "variable": []
+        },
+        "method": "GET"
+      },
+      "response": [],
+      "event": []
+    },
+    {
+      "id": "70f6510f-d02e-4226-a797-95c5dbd2af1f",
+      "name": "Decode Token",
+      "request": {
+        "url": {
+          "protocol": "http",
+          "port": "5000",
+          "path": ["api", "auth", "decode-token"],
+          "host": ["localhost"],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"token\":\"<YOUR_JWT_TOKEN>\"}"
+        }
+      },
+      "response": [],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [],
+  "info": {
+    "_postman_id": "f0e7e8ae-e074-45c3-8766-b449fe4a5e9a",
+    "name": "Token API Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Collection for Token API",
+      "type": "text/plain"
+    }
+  }
+}
